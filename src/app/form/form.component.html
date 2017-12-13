@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 text-center form-parent">
+      <form>
+        <div class="form-group">
+            <label for="inputWord" class="pull-left">Enter the word to be converted to pig latin</label>
+            <input type="text" class="form-control" name="inputWord"  [(ngModel)]="inputWord" (keyup)="translate($event)">
+        </div>
+        <div class="col-lg-12 no-gutter">
+          <p class="text-left">Your word : {{ inputWord }}</p> 
+          <p class="text-left">Pig latin : {{ userText }}</p>
+       </div>
+      </form>
+      <!--<button class="btn btn-primary">Saved list</button>-->
+      <ul class="text-left">
+        <li *ngFor="let item of list">{{ item }}</li>
+      </ul>
+  </div>
+  </div>
+</div>
